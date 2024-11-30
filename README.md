@@ -1,4 +1,4 @@
-# ASING! - Machine Learning Team (C241-PS157)
+# FreshMate - Machine Learning Team (C242-PS007)
 
 ## Project Overview
 
