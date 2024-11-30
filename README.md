@@ -49,7 +49,7 @@ The model is built using the ResNet50 architecture with pre-trained weights from
 - Batch normalization and dropout layers to reduce overfitting.
 - An output layer with a softmax activation function for classification.
 
-![Arsitektur Model FreshMate](Image/model_architecture)
+![Arsitektur Model FreshMate](Image/model_architecture.png)
 
 ## Training
 
