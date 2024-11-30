@@ -26,7 +26,7 @@ The dataset used in this project is obtained from [this source](https://storage.
 
 ## Data Preprocessing
 
-The dataset used for the Food Classification model consists of images categorized as suitable or not suitable for consumption by pregnant women. It includes a variety of food items (20 Classes) commonly consumed by pregnant women.
+The dataset used for the Fruit Classification model consists of images categorized as suitable or not suitable for consumption by people. It includes a variety of food items (20 Classes) commonly consumed by pregnant women.
 
 Data augmentation techniques enhance the dataset's diversity and size. The ImageDataGenerator class from TensorFlow is used for rescaling, rotation, zooming, flipping, shifting, shearing, and adjusting the brightness of the images. This helps improve the model's ability to generalize and make accurate predictions.
 The preprocessing steps include:
@@ -40,7 +40,7 @@ The preprocessing steps include:
 
 ![Alt text](Image/resnet_architecture.png)
 
-Sandler, M., Howard, A., Zhu, M., Zhmoginov, A., & Chen, L.-C. (2018). MobileNetV2: Inverted Residuals and Linear Bottlenecks. In *Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition* (pp. 4510-4520).
+Sandler, M., Howard, A., Zhu, M., Zhmoginov, A., & Chen, L.-C. (2018). Resnet: Inverted Residuals and Linear Bottlenecks. In *Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition* (pp. 4510-4520).
 
 The model is built using the ResNet50 architecture with pre-trained weights from ImageNet. The architecture includes:
 
@@ -49,7 +49,7 @@ The model is built using the ResNet50 architecture with pre-trained weights from
 - Batch normalization and dropout layers to reduce overfitting.
 - An output layer with a softmax activation function for classification.
 
-![Arsitektur Model Asing](img/model_architecture.png)
+![Arsitektur Model FreshMate](Image/model_architecture)
 
 ## Training
 
