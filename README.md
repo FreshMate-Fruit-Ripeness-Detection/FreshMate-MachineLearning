@@ -2,8 +2,8 @@
 
 ## Project Overview
 
-This project aims to classify food into categories deemed worthy or unworthy of consumption for pregnant women, with the overarching goal of reducing stunting rates in Indonesia. Utilizing Convolutional Neural Network (CNN) architecture and TensorFlow, 
-our model can detect and provide recommendations on the suitability of food for pregnant women based on images. Additionally, for recommended foods, the result will display nutritional information such as calories, fat, and protein content.
+The project was created to help fruit farmers, fruit sellers, and consumers sort fruits into three categories: unripe, ripe, and rotten. The ultimate goal is to prevent food waste while minimizing financial losses caused by fruit selection errors. The model analyzes images and makes accurate predictions using a Convolutional Neural Network (CNN) architecture and the TensorFlow framework. In addition, the prediction results include information regarding the fruit's content.
+
 ![Alt text](img/Introduction🌛.png)
 
 ## Table of Contents
