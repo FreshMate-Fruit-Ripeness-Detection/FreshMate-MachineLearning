@@ -39,7 +39,7 @@ The preprocessing steps include:
 
 ## Model Architecture
 
-![Alt text](https://github.com/rifialdiif/ASING-/assets/95648865/dc6776a8-01ec-4366-b618-483a40d4622e)
+![Alt text](Image/resnet_architecture.png)
 
 Sandler, M., Howard, A., Zhu, M., Zhmoginov, A., & Chen, L.-C. (2018). MobileNetV2: Inverted Residuals and Linear Bottlenecks. In *Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition* (pp. 4510-4520).
 
