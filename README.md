@@ -91,9 +91,9 @@ To use the model, follow these steps:
 
 ## Authors
 
-- [Rifiadi Faturrochman](https://github.com/rifialdiif)
-- [Reisa Aulia Sodikin](https://github.com/reisaaulia)
-- [M. Fadhillah Nursyawal](https://github.com/reisaaulia)
+- [Dudi Nurdiyansaah](https://github.com/)
+- [Ryan Ferdinand Andyson](https://github.com/ryanfa03)
+- [Maulida Kiatuddin](https://github.com/reisaaulia)
 
 ## Contributing
 Feel free to contribute to this project by submitting your ideas, suggestions, or improvements through a pull request. Please ensure that your contributions relevant for this project.
