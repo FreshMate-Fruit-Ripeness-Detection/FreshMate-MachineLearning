@@ -91,9 +91,9 @@ To use the model, follow these steps:
 
 ## Authors
 
-- [Dudi Nurdiyansaah](https://github.com/)
+- [Dudi Nurdiyansaah](https://github.com/dudinurdiyans)
 - [Ryan Ferdinand Andyson](https://github.com/ryanfa03)
-- [Maulida Kiatuddin](https://github.com/reisaaulia)
+- [Maulida Kiatuddin](https://github.com/moliirsa)
 
 ## Contributing
 Feel free to contribute to this project by submitting your ideas, suggestions, or improvements through a pull request. Please ensure that your contributions relevant for this project.
