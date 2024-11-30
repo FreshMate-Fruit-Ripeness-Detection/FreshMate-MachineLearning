@@ -19,17 +19,16 @@ The project was created to help fruit farmers, fruit sellers, and consumers sort
 
 ## Dataset
 
-The dataset used in this project is obtained from [this source](https://storage.googleapis.com/dataset-dragon-frost/New_Asing_Classification.zip). It contains food images categorized as suitable or not suitable for pregnant women.
+The dataset used in this project is obtained from [this source](https://storage.googleapis.com/dataset-dragon-frost/New_Asing_Classification.zip). It contains 10 fruit images with 3 categories: Unripe, Ripe, Rotten.
 
-- **Training Data**: `train` directory
-- **Validation Data**: `valid` directory
-- **Test Data**: `test` directory (moved to validation during preprocessing)
+- **Training Data**: `train_dataset_final` directory
+- **Validation Data**: `validation_dataset_final` directory
 
 ## Data Preprocessing
 
-The dataset used for the Food Classification model consists of images categorized as suitable or not suitable for consumption by pregnant women. The dataset includes a variety of food items (20 Class) commonly consumed by pregnant women.
+The dataset used for the Food Classification model consists of images categorized as suitable or not suitable for consumption by pregnant women. It includes a variety of food items (20 Classes) commonly consumed by pregnant women.
 
-Data augmentation techniques are applied to enhance the dataset's diversity and size. The ImageDataGenerator class from TensorFlow is used for rescaling, rotation, zooming, flipping, shifting, shearing, and adjusting the brightness of the images. This helps improve the model's ability to generalize and make accurate predictions.
+Data augmentation techniques enhance the dataset's diversity and size. The ImageDataGenerator class from TensorFlow is used for rescaling, rotation, zooming, flipping, shifting, shearing, and adjusting the brightness of the images. This helps improve the model's ability to generalize and make accurate predictions.
 The preprocessing steps include:
 
 - Resizing images to 224x224 pixels.
@@ -43,9 +42,9 @@ The preprocessing steps include:
 
 Sandler, M., Howard, A., Zhu, M., Zhmoginov, A., & Chen, L.-C. (2018). MobileNetV2: Inverted Residuals and Linear Bottlenecks. In *Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition* (pp. 4510-4520).
 
-The model is built using the MobileNetV2 architecture with pre-trained weights from ImageNet. The architecture includes:
+The model is built using the ResNet50 architecture with pre-trained weights from ImageNet. The architecture includes:
 
-- A base model from MobileNetV2 with the top layers removed.
+- A base model from ResNet50 with the top layers removed.
 - Additional dense layers for feature extraction.
 - Batch normalization and dropout layers to reduce overfitting.
 - An output layer with a softmax activation function for classification.
@@ -57,13 +56,13 @@ The model is built using the MobileNetV2 architecture with pre-trained weights f
 The model is trained using:
 
 - **Optimizer**: Adam with a learning rate of 0.001.
-- **Loss Function**: Sparse Categorical Crossentropy.
+- **Loss Function**: Categorical Crossentropy.
 - **Metrics**: Accuracy.
 
 The training process includes callbacks for:
 
 - Saving the best model.
-- Early stopping if the validation accuracy does not improve.
+- Early stopping if the validation accuracy has reached 95%.
 - Reducing the learning rate when the validation loss plateaus.
 
 ## Model Conversion
@@ -96,7 +95,7 @@ To use the model, follow these steps:
 - [Maulida Kiatuddin](https://github.com/moliirsa)
 
 ## Contributing
-Feel free to contribute to this project by submitting your ideas, suggestions, or improvements through a pull request. Please ensure that your contributions relevant for this project.
+Feel free to contribute to this project by submitting your ideas, suggestions, or improvements through a pull request. Please ensure that your contributions are relevant to this project.
 
 ## Acknowledgments
-This project is part of the Bangkit Academy 2024 capstone project by Team C241-PS157. Special thanks to our advisors especially Mr. Kasmir Syariati & Mrs. Cynthia Cecilia  for their guidance and support.
+This project is part of the Bangkit Academy 2024 Batch 2 capstone project by Team C242-PS007. Special thanks to our advisors who helped us through our capstone project journey especially Mr. Ferry Yun Kurniawan & Mr. Mirza Ukasyah Yazdani for their guidance and support.
