@@ -90,7 +90,7 @@ To use the model, follow these steps:
 
 ## Authors
 
-- [Dudi Nurdiyansaah](https://github.com/dudinurdiyans)
+- [Dudi Nurdiyansah](https://github.com/dudinurdiyans)
 - [Ryan Ferdinand Andyson](https://github.com/ryanfa03)
 - [Maulida Kiatuddin](https://github.com/moliirsa)
 
