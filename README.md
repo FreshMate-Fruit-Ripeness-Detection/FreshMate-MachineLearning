@@ -2,9 +2,9 @@
 
 ## Project Overview
 
-This project aims to classify food into categories deemed worthy or unworthy of consumption for pregnant women, with the overarching goal of reducing stunting rates in Indonesia. Utilizing Convolutional Neural Network (CNN) architecture and TensorFlow, 
-our model can detect and provide recommendations on the suitability of food for pregnant women based on images. Additionally, for recommended foods, the result will display nutritional information such as calories, fat, and protein content.
-![Alt text](img/Introduction🌛.png)
+The project was created to help fruit farmers, fruit sellers, and consumers sort fruits into three categories: unripe, ripe, and rotten. The ultimate goal is to prevent food waste while minimizing financial losses caused by fruit selection errors. The model analyzes images and makes accurate predictions using a Convolutional Neural Network (CNN) architecture and the TensorFlow framework. In addition, the prediction results include information regarding the fruit's content.
+
+![Thumbnail IMG](Image/thumbnail_apps)
 
 ## Table of Contents
 
@@ -19,60 +19,58 @@ our model can detect and provide recommendations on the suitability of food for 
 
 ## Dataset
 
-The dataset used in this project is obtained from [this source](https://storage.googleapis.com/dataset-dragon-frost/New_Asing_Classification.zip). It contains food images categorized as suitable or not suitable for pregnant women.
+This dataset was obtained by scraping images from some websites and can be accessed via the following [link](https://storage.googleapis.com/dataset-dragon-frost/New_Asing_Classification.zip). It contains 10 fruit images divided into 3 categories: Unripe, Ripe, and Rotten.
 
-- **Training Data**: `train` directory
-- **Validation Data**: `valid` directory
-- **Test Data**: `test` directory (moved to validation during preprocessing)
+- **Training Data**: `train_dataset_final` directory
+- **Validation Data**: `validation_dataset_final` directory
 
 ## Data Preprocessing
 
-The dataset used for the Food Classification model consists of images categorized as suitable or not suitable for consumption by pregnant women. The dataset includes a variety of food items (20 Class) commonly consumed by pregnant women.
+The dataset used for the fruit classification and prediction model consists of various types of fruits, with images categorized as unripe, ripe, or rotten. This dataset includes a wide range of fruits commonly consumed by people.
 
-Data augmentation techniques are applied to enhance the dataset's diversity and size. The ImageDataGenerator class from TensorFlow is used for rescaling, rotation, zooming, flipping, shifting, shearing, and adjusting the brightness of the images. This helps improve the model's ability to generalize and make accurate predictions.
+The data augmentation model enhances the diversity and size of the dataset. Using TensorFlow's data augmentation techniques, the images are flipped, rotated, translated, adjusted for contrast, and zoomed. These processes help improve the model's ability to generalize and make more accurate predictions.
 The preprocessing steps include:
 
 - Resizing images to 224x224 pixels.
-- Converting images to grayscale.
-- Normalizing pixel values.
 - Applying various augmentations such as random brightness, contrast, saturation, hue adjustments, flipping, rotation, and zooming.
 
 ## Model Architecture
 
-![Alt text](https://github.com/rifialdiif/ASING-/assets/95648865/dc6776a8-01ec-4366-b618-483a40d4622e)
+![Alt text](Image/resnet50_architecture.png)
 
-Sandler, M., Howard, A., Zhu, M., Zhmoginov, A., & Chen, L.-C. (2018). MobileNetV2: Inverted Residuals and Linear Bottlenecks. In *Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition* (pp. 4510-4520).
+Agrawal, S.A., Rewaskar, V.D., Agrawal, R.A., Chaudari, S.S., Patil, Y. & Agrawal, N.S. (2023). Advancements in NSFW Content Detection: A Comprehensive Review of ResNet-50 Based Approaches. In *International Journal of Intelligent System And Applications In Engineering* (pp. 41-45).
 
-The model is built using the MobileNetV2 architecture with pre-trained weights from ImageNet. The architecture includes:
+The model is built using the ResNet50 architecture with pre-trained weights from ImageNet. The architecture includes:
 
-- A base model from MobileNetV2 with the top layers removed.
-- Additional dense layers for feature extraction.
-- Batch normalization and dropout layers to reduce overfitting.
-- An output layer with a softmax activation function for classification.
+- The base model utilizes ResNet50 with its top layers removed.
+- GlobalAveragePooling2D is applied to simplify the spatial dimensions of a tensor.  
+- Dropout layer is included to minimize overfitting.
+- Dense layers are applied to extract features.   
+- The output layer employs a softmax activation function to perform classification.  
 
-![Arsitektur Model Asing](img/model_architecture.png)
+![Arsitektur Model FreshMate](Image/model_architecture.png)
 
 ## Training
 
 The model is trained using:
 
 - **Optimizer**: Adam with a learning rate of 0.001.
-- **Loss Function**: Sparse Categorical Crossentropy.
+- **Loss Function**: Categorical Crossentropy.
 - **Metrics**: Accuracy.
 
 The training process includes callbacks for:
 
 - Saving the best model.
-- Early stopping if the validation accuracy does not improve.
+- Early stopping if the validation accuracy has reached 91%.
 - Reducing the learning rate when the validation loss plateaus.
 
 ## Model Conversion
 
-The trained model is converted to TensorFlow.js format to integrate the model with our Android application using an API. This decision was made to reduce the device's load and minimize performance impact. The steps include:
+The trained model was transformed into TensorFlow.js format to enable seamless integration with our Android application through an API. This approach was chosen to lessen the device's workload and ensure optimal performance. The process involved the following steps:
 
-- Saving the Keras model in TensorFlow SavedModel(h5) format.
-- Converting the SavedModel to TensorFlow.js format.
-- Compressing the TensorFlow.js model folder for easy download.
+- Exporting the Keras model in TensorFlow SavedModel (h5) format.
+- Converting the SavedModel into TensorFlow.js format.
+- Compressing the TensorFlow.js model directory to facilitate convenient downloading.
 
 ## Usage
 
@@ -80,23 +78,23 @@ To use the model, follow these steps:
 
 1. **Clone the repository**.
    ```sh
-   git clone https://github.com/rifialdiif/ASING-.git
+   git clone https://github.com/ryanfa03/FreshMate-.git
 2. **Install the required dependencies** in your Google Colab/Jupyter Notebook.
    ```sh
     pip install tensorflow pandas numpy opencv-python matplotlib
-3. **Navigate to the Notebooks** directory within the cloned repository and open the notebook files.
-4. **Execute the code cells** within the notebooks to train the machine learning model and assess its performance.
-5. **Save the trained model as model.h5** for future reference and use.
-6. **Convert the trained model to the TensorFlow JS (TF.js)** format using the provided code and save it as tfjs_model.zip.
+3. **Open the Notebooks** directory in the cloned repository and access the notebook files.
+4. **Run the code cells** in the notebooks to train the machine learning model and evaluate its performance.
+5. **Save the trained model as model.h5** for later use and reference.
+6. **Convert the trained model to the TensorFlow JS (TF.js)** format using the supplied code, and save it as tfjs_model.zip.
 
 ## Authors
 
-- [Dudi Nurdiyansaah](https://github.com/dudinurdiyans)
+- [Dudi Nurdiyansah](https://github.com/dudinurdiyans)
 - [Ryan Ferdinand Andyson](https://github.com/ryanfa03)
 - [Maulida Kiatuddin](https://github.com/moliirsa)
 
 ## Contributing
-Feel free to contribute to this project by submitting your ideas, suggestions, or improvements through a pull request. Please ensure that your contributions relevant for this project.
+Feel free to contribute to this project by sharing your ideas, suggestions, or enhancements via a pull request. Kindly ensure that your contributions align with the project's goals.
 
 ## Acknowledgments
-This project is part of the Bangkit Academy 2024 capstone project by Team C241-PS157. Special thanks to our advisors especially Mr. Kasmir Syariati & Mrs. Cynthia Cecilia  for their guidance and support.
+This project is part of the Bangkit Academy 2024 Batch 2 capstone project by Team C242-PS007. Special thanks to our advisors who helped us through our capstone project journey especially Mr. Ferry Yun Kurniawan & Mr. Mirza Ukasyah Yazdani for their guidance and support.
