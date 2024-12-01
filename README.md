@@ -4,7 +4,7 @@
 
 The project was created to help fruit farmers, fruit sellers, and consumers sort fruits into three categories: unripe, ripe, and rotten. The ultimate goal is to prevent food waste while minimizing financial losses caused by fruit selection errors. The model analyzes images and makes accurate predictions using a Convolutional Neural Network (CNN) architecture and the TensorFlow framework. In addition, the prediction results include information regarding the fruit's content.
 
-![Alt text](img/Introduction🌛.png)
+![Alt text](Image/thumbnail_apps)
 
 ## Table of Contents
 
@@ -19,7 +19,7 @@ The project was created to help fruit farmers, fruit sellers, and consumers sort
 
 ## Dataset
 
-The dataset used in this project is obtained from [this source](https://storage.googleapis.com/dataset-dragon-frost/New_Asing_Classification.zip). It contains 10 fruit images with 3 categories: Unripe, Ripe, Rotten.
+The dataset used in this project is obtained from [this source](https://storage.googleapis.com/dataset-dragon-frost/New_Asing_Classification.zip). It contains 10 fruit images divided into 3 categories: Unripe, Ripe, and Rotten.
 
 - **Training Data**: `train_dataset_final` directory
 - **Validation Data**: `validation_dataset_final` directory
@@ -62,16 +62,16 @@ The model is trained using:
 The training process includes callbacks for:
 
 - Saving the best model.
-- Early stopping if the validation accuracy has reached 95%.
+- Early stopping if the validation accuracy has reached 91%.
 - Reducing the learning rate when the validation loss plateaus.
 
 ## Model Conversion
 
-The trained model is converted to TensorFlow.js format to integrate the model with our Android application using an API. This decision was made to reduce the device's load and minimize performance impact. The steps include:
+The trained model was transformed into TensorFlow.js format to enable seamless integration with our Android application through an API. This approach was chosen to lessen the device's workload and ensure optimal performance. The process involved the following steps:
 
-- Saving the Keras model in TensorFlow SavedModel(h5) format.
-- Converting the SavedModel to TensorFlow.js format.
-- Compressing the TensorFlow.js model folder for easy download.
+- Exporting the Keras model in TensorFlow SavedModel (h5) format.
+- Converting the SavedModel into TensorFlow.js format.
+- Compressing the TensorFlow.js model directory to facilitate convenient downloading.
 
 ## Usage
 
@@ -79,14 +79,14 @@ To use the model, follow these steps:
 
 1. **Clone the repository**.
    ```sh
-   git clone https://github.com/rifialdiif/ASING-.git
+   git clone https://github.com/ryanfa03/FreshMate-.git
 2. **Install the required dependencies** in your Google Colab/Jupyter Notebook.
    ```sh
     pip install tensorflow pandas numpy opencv-python matplotlib
-3. **Navigate to the Notebooks** directory within the cloned repository and open the notebook files.
-4. **Execute the code cells** within the notebooks to train the machine learning model and assess its performance.
-5. **Save the trained model as model.h5** for future reference and use.
-6. **Convert the trained model to the TensorFlow JS (TF.js)** format using the provided code and save it as tfjs_model.zip.
+3. **Open the Notebooks** directory in the cloned repository and access the notebook files.
+4. **Run the code cells** in the notebooks to train the machine learning model and evaluate its performance.
+5. **Save the trained model as model.h5** for later use and reference.
+6. **Convert the trained model to the TensorFlow JS (TF.js)** format using the supplied code, and save it as tfjs_model.zip.
 
 ## Authors
 
@@ -95,7 +95,7 @@ To use the model, follow these steps:
 - [Maulida Kiatuddin](https://github.com/moliirsa)
 
 ## Contributing
-Feel free to contribute to this project by submitting your ideas, suggestions, or improvements through a pull request. Please ensure that your contributions are relevant to this project.
+Feel free to contribute to this project by sharing your ideas, suggestions, or enhancements via a pull request. Kindly ensure that your contributions align with the project's goals.
 
 ## Acknowledgments
 This project is part of the Bangkit Academy 2024 Batch 2 capstone project by Team C242-PS007. Special thanks to our advisors who helped us through our capstone project journey especially Mr. Ferry Yun Kurniawan & Mr. Mirza Ukasyah Yazdani for their guidance and support.
