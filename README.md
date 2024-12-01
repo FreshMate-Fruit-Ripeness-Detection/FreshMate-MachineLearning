@@ -4,7 +4,7 @@
 
 The project was created to help fruit farmers, fruit sellers, and consumers sort fruits into three categories: unripe, ripe, and rotten. The ultimate goal is to prevent food waste while minimizing financial losses caused by fruit selection errors. The model analyzes images and makes accurate predictions using a Convolutional Neural Network (CNN) architecture and the TensorFlow framework. In addition, the prediction results include information regarding the fruit's content.
 
-![Alt text](Image/thumbnail_apps)
+![Thumbnail IMG](Image/thumbnail_apps)
 
 ## Table of Contents
 
@@ -19,35 +19,34 @@ The project was created to help fruit farmers, fruit sellers, and consumers sort
 
 ## Dataset
 
-The dataset used in this project is obtained from [this source](https://storage.googleapis.com/dataset-dragon-frost/New_Asing_Classification.zip). It contains 10 fruit images divided into 3 categories: Unripe, Ripe, and Rotten.
+This dataset was obtained by scraping images from some websites and can be accessed via the following [link](https://storage.googleapis.com/dataset-dragon-frost/New_Asing_Classification.zip). It contains 10 fruit images divided into 3 categories: Unripe, Ripe, and Rotten.
 
 - **Training Data**: `train_dataset_final` directory
 - **Validation Data**: `validation_dataset_final` directory
 
 ## Data Preprocessing
 
-The dataset used for the Fruit Classification model consists of images categorized as suitable or not suitable for consumption by people. It includes a variety of food items (20 Classes) commonly consumed by pregnant women.
+The dataset used for the fruit classification and prediction model consists of various types of fruits, with images categorized as unripe, ripe, or rotten. This dataset includes a wide range of fruits commonly consumed by people.
 
-Data augmentation techniques enhance the dataset's diversity and size. The ImageDataGenerator class from TensorFlow is used for rescaling, rotation, zooming, flipping, shifting, shearing, and adjusting the brightness of the images. This helps improve the model's ability to generalize and make accurate predictions.
+The data augmentation model enhances the diversity and size of the dataset. Using TensorFlow's data augmentation techniques, the images are flipped, rotated, translated, adjusted for contrast, and zoomed. These processes help improve the model's ability to generalize and make more accurate predictions.
 The preprocessing steps include:
 
 - Resizing images to 224x224 pixels.
-- Converting images to grayscale.
-- Normalizing pixel values.
 - Applying various augmentations such as random brightness, contrast, saturation, hue adjustments, flipping, rotation, and zooming.
 
 ## Model Architecture
 
 ![Alt text](Image/resnet_architecture.png)
 
-Sandler, M., Howard, A., Zhu, M., Zhmoginov, A., & Chen, L.-C. (2018). Resnet: Inverted Residuals and Linear Bottlenecks. In *Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition* (pp. 4510-4520).
+Agrawal, S.A., Rewaskar, V.D., Agrawal, R.A., Chaudari, S.S., Patil, Y. & Agrawal, N.S. (2023). Advancements in NSFW Content Detection: A Comprehensive Review of ResNet-50 Based Approaches. In *International Journal of Intelligent System And Applications In Engineering* (pp. 41-45).
 
 The model is built using the ResNet50 architecture with pre-trained weights from ImageNet. The architecture includes:
 
-- A base model from ResNet50 with the top layers removed.
-- Additional dense layers for feature extraction.
-- Batch normalization and dropout layers to reduce overfitting.
-- An output layer with a softmax activation function for classification.
+- The base model utilizes ResNet50 with its top layers removed.
+- GlobalAveragePooling2D is applied to simplify the spatial dimensions of a tensor.  
+- Dropout layer is included to minimize overfitting.
+- Dense layers are applied to extract features.   
+- The output layer employs a softmax activation function to perform classification.  
 
 ![Arsitektur Model FreshMate](Image/model_architecture.png)
 
