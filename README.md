@@ -36,7 +36,7 @@ The preprocessing steps include:
 
 ## Model Architecture
 
-![Alt text](Image/resnet_architecture.png)
+![Alt text](Image/resnet50_architecture.png)
 
 Agrawal, S.A., Rewaskar, V.D., Agrawal, R.A., Chaudari, S.S., Patil, Y. & Agrawal, N.S. (2023). Advancements in NSFW Content Detection: A Comprehensive Review of ResNet-50 Based Approaches. In *International Journal of Intelligent System And Applications In Engineering* (pp. 41-45).
 
