@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-The project was created to help fruit farmers, fruit sellers, and consumers sort fruits into three categories: unripe, ripe, and rotten. The ultimate goal is to prevent food waste while minimizing financial losses caused by fruit selection errors. The model analyzes images and makes accurate predictions using a Convolutional Neural Network (CNN) architecture and the TensorFlow framework. In addition, the prediction results include information regarding the fruit's content.
+The project was created to help fruit farmers, fruit sellers, and consumers classify fruits into three categories: unripe, ripe, and rotten. The ultimate goal is to prevent food waste while minimizing financial losses caused by fruit selection errors. The model analyzes images and makes accurate predictions using a Convolutional Neural Network (CNN) architecture and the TensorFlow framework. In addition, the prediction results include information regarding the fruit's content.
 
 ![Thumbnail IMG](Image/thumbnail_apps)
 
@@ -26,7 +26,7 @@ This dataset was obtained by scraping images from some websites and can be acces
 
 ## Data Preprocessing
 
-The dataset used for the fruit classification and prediction model consists of various types of fruits, with images categorized as unripe, ripe, or rotten. This dataset includes a wide range of fruits commonly consumed by people.
+The dataset used for the fruit classification model consists of various types of fruits, with images categorized as unripe, ripe, or rotten. This dataset includes a wide range of fruits commonly consumed by people.
 
 The data augmentation model enhances the diversity and size of the dataset. Using TensorFlow's data augmentation techniques, the images are flipped, rotated, translated, adjusted for contrast, and zoomed. These processes help improve the model's ability to generalize and make more accurate predictions.
 The preprocessing steps include:
