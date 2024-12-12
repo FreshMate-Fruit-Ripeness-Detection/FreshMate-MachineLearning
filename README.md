@@ -4,7 +4,7 @@
 
 The project was created to help fruit farmers, fruit sellers, and consumers classify fruits into three categories: unripe, ripe, and rotten. The ultimate goal is to prevent food waste while minimizing financial losses caused by fruit selection errors. The model analyzes images and makes accurate predictions using a Convolutional Neural Network (CNN) architecture and the TensorFlow framework. In addition, the prediction results include information regarding the fruit's content.
 
-![Thumbnail IMG](Image/thumbnail_apps)
+![Thumbnail IMG](Image/mockup.png)
 
 ## Table of Contents
 
