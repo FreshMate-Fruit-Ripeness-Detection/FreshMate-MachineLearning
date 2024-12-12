@@ -19,7 +19,7 @@ The project was created to help fruit farmers, fruit sellers, and consumers clas
 
 ## Dataset
 
-This dataset was obtained by scraping images from some websites and can be accessed via the following [link](https://storage.googleapis.com/dataset-dragon-frost/New_Asing_Classification.zip). It contains 10 fruit images divided into 3 categories: Unripe, Ripe, and Rotten.
+This dataset was obtained by scraping images from some websites and can be accessed via the following [link](https://www.kaggle.com/datasets/dudinurdiyansah/fruit-ripeness-classifier). It contains 10 fruit images divided into 3 categories: Unripe, Ripe, and Rotten.
 
 - **Training Data**: `train_dataset_final` directory
 - **Validation Data**: `validation_dataset_final` directory
