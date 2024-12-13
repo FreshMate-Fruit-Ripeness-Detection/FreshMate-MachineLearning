@@ -66,11 +66,13 @@ The training process includes callbacks for:
 
 ## Model Conversion
 
-The trained model was transformed into TensorFlow.js format to enable seamless integration with our Android application through an API. This approach was chosen to lessen the device's workload and ensure optimal performance. The process involved the following steps:
+The trained model was seamlessly deployed to a FastAPI backend to enable dynamic predictions via API integration with the Android application. This approach was chosen to centralize computations on the server, reducing the workload on the user’s device and ensuring optimal performance. The process involved the following steps:
 
-- Exporting the Keras model in TensorFlow SavedModel (h5) format.
-- Converting the SavedModel into TensorFlow.js format.
-- Compressing the TensorFlow.js model directory to facilitate convenient downloading.
+- Exporting the best-trained model in Keras .keras format.
+- Loading the model into a FastAPI application, which processes uploaded images and returns predictions.
+- Preprocessing the uploaded images to ensure compatibility with the model’s input format.
+- Implementing an endpoint to handle prediction requests and return results, including the predicted class and confidence score.
+- Adding a threshold mechanism to filter uncertain predictions and enhance reliability.
 
 ## Usage
 
